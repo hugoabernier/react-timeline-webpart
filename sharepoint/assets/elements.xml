@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+<Field ID="{081aa73a-fa19-4cf9-b35f-3dee86be0498}"
+            Name="EventTitle"
+            DisplayName="Event Title"
+            Type="Note"
+            NumLines="6"
+            RichText="TRUE"
+            RichTextMode="FullHtml"
+            Required="FALSE"
+            Group="Timeline Columns"
+            Description="What will display in the timeline" />
+<Field ID="{0578907d-fc4d-4fbc-bdf0-a05a5e872b91}"
+            Name="EventDescription"
+            DisplayName="Event Description"
+            Type="Note"
+            Required="FALSE"
+            NumLines="6"
+            RichText="TRUE"
+            RichTextMode="FullHtml"
+            Group="Timeline Columns"
+            Description="What will display when a user hovers their mouse over an event"
+            />
+<Field ID="{b12dcc07-2ea1-4672-ac66-e941b483d1df}"
+         Name="EventType"
+         DisplayName="Event Type"
+         Type="Choice"
+         Required="TRUE"
+         Group="Timeline Columns">
+    <CHOICES>
+      <CHOICE>Box</CHOICE>
+      <CHOICE>Point</CHOICE>
+      <CHOICE>Range</CHOICE>
+      <CHOICE>Background</CHOICE>
+    </CHOICES>
+    <Default>Box</Default>
+</Field>
+<Field ID="{5339cd24-8a7a-4e5b-97c8-746d2bb73921}"
+            Name="EventGroup"
+            DisplayName="Event Group"
+            Type="Text"
+            Required="FALSE"
+            Group="Timeline Columns" />
+<Field ID="{03abd4aa-24c8-4be0-9385-9bed1ddf49b4}"
+            Name="EventSubGroup"
+            DisplayName="Event Sub-Group"
+            Type="Text"
+            Required="FALSE"
+            Group="Timeline Columns" />
+<Field ID="{7554b3c6-6446-4ba5-9acf-4e9a844d81e2}"
+            Name="StartDate"
+            DisplayName="Start Date"
+            Type="DateTime"
+            Format="DateOnly"
+            Required="TRUE"
+            Group="Timeline Columns" />
+<Field ID="{427f87f2-daf0-4163-9ced-a52f789e282f}"
+            Name="EndDate"
+            DisplayName="End Date"
+            Type="DateTime"
+            Format="DateOnly"
+            Required="FALSE"
+            Group="Timeline Columns" />
+<ContentType ID="0x0100709db86989994c01b5703ece6468ec74"
+            Name="TimelineItemContentType"
+            Group="Timeline Item"
+            Description="This is a item to display within an interactive timeline">
+        <FieldRefs>
+            <FieldRef ID="{081aa73a-fa19-4cf9-b35f-3dee86be0498}" />
+            <FieldRef ID="{0578907d-fc4d-4fbc-bdf0-a05a5e872b91}" />
+            <FieldRef ID="{5339cd24-8a7a-4e5b-97c8-746d2bb73921}" />
+            <FieldRef ID="{03abd4aa-24c8-4be0-9385-9bed1ddf49b4}" />
+            <FieldRef ID="{b12dcc07-2ea1-4672-ac66-e941b483d1df}" />
+            <FieldRef ID="{7554b3c6-6446-4ba5-9acf-4e9a844d81e2}" />
+            <FieldRef ID="{427f87f2-daf0-4163-9ced-a52f789e282f}" />
+        </FieldRefs>
+</ContentType>
+    <ListInstance
+            CustomSchema="schema.xml"
+            FeatureId="49d4bc90-52c0-4258-b19e-438480ee6930"
+            Title="Timeline"
+            Description="Timeline events for interactive timeline"
+            TemplateType="100"
+            Url="Lists/Timeline">
+     </ListInstance>
+</Elements>

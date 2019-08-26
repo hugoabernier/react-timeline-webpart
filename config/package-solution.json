@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "Interactive Timeline",
+    "id": "59e32cd7-fdf7-47b0-9e6b-68b3d227f9f3",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "features": [{
+      "title": "timeline-client-side-solution",
+      "description": "timeline-client-side-solution",
+      "id": "c6753f9e-f774-4f53-9d04-2d3c385d264e",
+      "version": "1.0.0.0",
+      "assets": {
+        "elementManifests": [
+          "elements.xml"
+        ],
+        "elementFiles":[
+          "schema.xml"
+        ]
+      }
+    }]
+  },
+  "paths": {
+    "zippedPackage": "solution/react-timeline.sppkg"
+  }
+}

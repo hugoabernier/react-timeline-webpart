@@ -1,0 +1,26 @@
+@import "~office-ui-fabric-react/dist/sass/References.scss";
+
+.timelineView {
+  padding: 8px;
+
+  :global(.vis-panel) :global(.vis-shadow) {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    box-shadow: none;
+  }
+
+  :global(.vis-timeline) {
+    border-color: $ms-color-neutralLight;
+  }
+
+  :global(.vis-item) {
+    position: absolute;
+    color: $ms-color-neutralPrimary;
+    border-color: $ms-color-themeLight;
+    border-width: 1px;
+    background-color: $ms-color-themeLighter;
+    display: inline-block;
+    z-index: 1;
+  }
+}
